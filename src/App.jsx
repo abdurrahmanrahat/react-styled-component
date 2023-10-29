@@ -94,6 +94,20 @@ function App() {
     justify-content: space-between;
   `;
 
+  // password div
+  const StyledPassDiv = styled.div`
+    position: relative;
+  `;
+  // eye icon span
+  const StyledEyeSpan = styled.span`
+    position: absolute;
+    top: 40px;
+    right: 16px;
+  `;
+
+  // id div
+  const StyledIdDiv = styled.div``;
+
   return (
     <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
@@ -108,25 +122,25 @@ function App() {
           </div>
 
           {/* ID */}
-          <div>
+          <StyledIdDiv>
             <StyledLabel>Login ID</StyledLabel>
             <StyledInput type="text" placeholder="Enter Login ID"></StyledInput>
-          </div>
+          </StyledIdDiv>
 
           {/* password */}
-          <div className="relative">
+          <StyledPassDiv>
             <StyledLabel>Password</StyledLabel>
             <StyledInput
               type="password"
               placeholder="Enter Password"
             ></StyledInput>
             {/* eye icon */}
-            <span className="absolute top-10 right-4">
+            <StyledEyeSpan>
               <FaEyeSlash />
-            </span>
-          </div>
+            </StyledEyeSpan>
+          </StyledPassDiv>
 
-          <StyledRemChangedDiv className="flex justify-between">
+          <StyledRemChangedDiv>
             <Label>
               <Input />
               <LabelText>Remember Me</LabelText>
@@ -142,11 +156,11 @@ function App() {
             </LabelText>
           </Label>
 
-          <StyledBtnRegDiv className="flex items-center justify-center mt-4">
+          <StyledBtnRegDiv>
             <StyledButton>Login</StyledButton>
           </StyledBtnRegDiv>
 
-          <StyledBtnRegDiv className="flex items-center justify-center mt-4">
+          <StyledBtnRegDiv>
             <LabelText>
               Did&apos;t have an account?{" "}
               <StyleRegisterText>Register Here</StyleRegisterText>
