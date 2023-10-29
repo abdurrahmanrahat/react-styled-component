@@ -80,6 +80,10 @@ function App() {
     border-radius: 8px;
   `;
 
+  /*
+    all divs here.......
+  */
+
   // button and register div
   const StyledBtnRegDiv = styled.div`
     display: flex;
@@ -108,6 +112,14 @@ function App() {
   // id div
   const StyledIdDiv = styled.div``;
 
+  // heading title div
+  const StyledHeadingTitleDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  `;
+
   return (
     <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
@@ -117,9 +129,9 @@ function App() {
       {/* form fields */}
       <div className="md:w-1/2 mx-auto w-full p-4 md:p-8">
         <StyledForm>
-          <div className="flex items-center justify-center mb-6">
+          <StyledHeadingTitleDiv className="flex items-center justify-center mb-6">
             <StyleHeadingTitle>Login</StyleHeadingTitle>
-          </div>
+          </StyledHeadingTitleDiv>
 
           {/* ID */}
           <StyledIdDiv>
