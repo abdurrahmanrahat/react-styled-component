@@ -6,6 +6,9 @@ function App() {
   // form styled
   const StyledForm = styled.form`
     padding: 20px;
+    @media (max-width: 769px) {
+      padding: 2px;
+    }
   `;
 
   // h2 style
@@ -19,6 +22,19 @@ function App() {
   const StyleSpanText = styled.span`
     color: #f78719;
     font-size: 18px;
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
+  `;
+
+  const StyleRegisterText = styled.span`
+    color: #f78719;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 700;
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
   `;
 
   // form label
@@ -47,6 +63,9 @@ function App() {
   `;
   const LabelText = styled.span`
     font-size: 18px;
+    @media (max-width: 769px) {
+      font-size: 16px;
+    }
   `;
 
   // login button
@@ -61,13 +80,13 @@ function App() {
   `;
 
   return (
-    <div className="md:flex items-center gap-4 p-4 md:p-12">
+    <div className="md:flex items-center gap-4 p-4 lg:p-12">
       {/* image */}
       <div className="md:w-1/2">
         <img src={FormImg} alt="" className="md:w-[420px]" />
       </div>
       {/* form fields */}
-      <div className="md:w-1/2 mx-auto w-full p-8">
+      <div className="md:w-1/2 mx-auto w-full p-4 md:p-8">
         <StyledForm>
           <div className="flex items-center justify-center mb-6">
             <StyleHeadingTitle>Login</StyleHeadingTitle>
@@ -106,6 +125,13 @@ function App() {
 
           <div className="flex items-center justify-center mt-4">
             <StyledButton>Login</StyledButton>
+          </div>
+
+          <div className="flex items-center justify-center mt-4">
+            <LabelText>
+              Did&apos;t have an account?{" "}
+              <StyleRegisterText>Register Here</StyleRegisterText>
+            </LabelText>
           </div>
         </StyledForm>
       </div>
