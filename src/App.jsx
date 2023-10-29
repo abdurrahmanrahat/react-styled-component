@@ -33,6 +33,7 @@ function App() {
     font-size: 18px;
     text-decoration: underline;
     font-weight: 700;
+    cursor: pointer;
     @media (max-width: 769px) {
       font-size: 16px;
     }
@@ -149,8 +150,24 @@ function App() {
     }
   `;
 
+  // main div
+  const StyledMainDiv = styled.div`
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    @media (min-width: 1024px) {
+      padding: 48px;
+    }
+  `;
+
   return (
-    <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
+    <StyledMainDiv>
       {/* image */}
       <StyledImgDiv>
         <StyledImgTag src={FormImg} alt="login img" />
@@ -209,7 +226,7 @@ function App() {
           </StyledBtnRegDiv>
         </StyledForm>
       </StyledFormContainer>
-    </div>
+    </StyledMainDiv>
   );
 }
 
