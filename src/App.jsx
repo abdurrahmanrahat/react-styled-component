@@ -15,7 +15,7 @@ function App() {
   // h2 style
   const StyleHeadingTitle = styled.h2`
     font-size: 48px;
-    lign-items: center;
+    align-items: center;
     font-weight: 700;
   `;
 
