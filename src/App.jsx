@@ -88,6 +88,12 @@ function App() {
     margin-top: 16px;
   `;
 
+  // remember and changed div
+  const StyledRemChangedDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+  `;
+
   return (
     <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
@@ -120,14 +126,14 @@ function App() {
             </span>
           </div>
 
-          <div className="flex justify-between">
+          <StyledRemChangedDiv className="flex justify-between">
             <Label>
               <Input />
               <LabelText>Remember Me</LabelText>
             </Label>
 
             <StyleSpanText>Changed Password</StyleSpanText>
-          </div>
+          </StyledRemChangedDiv>
 
           <Label>
             <Input />
