@@ -130,7 +130,22 @@ function App() {
   // img tag
   const StyledImgTag = styled.img`
     @media (min-width: 768px) {
+      width: 300px;
+    }
+    @media (min-width: 968px) {
       width: 420px;
+    }
+  `;
+
+  // form container div
+  const StyledFormContainer = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 16px;
+    @media (min-width: 768px) {
+      width: 50%;
+      padding: 32px;
     }
   `;
 
@@ -138,10 +153,10 @@ function App() {
     <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
       <StyledImgDiv>
-        <StyledImgTag src={FormImg} alt="login img"/>
+        <StyledImgTag src={FormImg} alt="login img" />
       </StyledImgDiv>
       {/* form fields */}
-      <div className="md:w-1/2 mx-auto w-full p-4 md:p-8">
+      <StyledFormContainer>
         <StyledForm>
           <StyledHeadingTitleDiv>
             <StyleHeadingTitle>Login</StyleHeadingTitle>
@@ -193,7 +208,7 @@ function App() {
             </LabelText>
           </StyledBtnRegDiv>
         </StyledForm>
-      </div>
+      </StyledFormContainer>
     </div>
   );
 }
