@@ -120,16 +120,30 @@ function App() {
     margin-bottom: 24px;
   `;
 
+  // img div
+  const StyledImgDiv = styled.div`
+    padding: 32px;
+    @media (min-width: 768px) {
+      padding: 0px;
+    }
+  `;
+  // img tag
+  const StyledImgTag = styled.img`
+    @media (min-width: 768px) {
+      width: 420px;
+    }
+  `;
+
   return (
     <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
-      <div className="md:w-1/2 p-8 md:p-0">
-        <img src={FormImg} alt="" className="md:w-[420px]" />
-      </div>
+      <StyledImgDiv>
+        <StyledImgTag src={FormImg} alt="login img"/>
+      </StyledImgDiv>
       {/* form fields */}
       <div className="md:w-1/2 mx-auto w-full p-4 md:p-8">
         <StyledForm>
-          <StyledHeadingTitleDiv className="flex items-center justify-center mb-6">
+          <StyledHeadingTitleDiv>
             <StyleHeadingTitle>Login</StyleHeadingTitle>
           </StyledHeadingTitleDiv>
 
