@@ -69,7 +69,9 @@ function App() {
       {/* form fields */}
       <div className="md:w-1/2 mx-auto w-full p-8">
         <StyledForm>
-          <StyleHeadingTitle>Login</StyleHeadingTitle>
+          <div className="flex items-center justify-center mb-6">
+            <StyleHeadingTitle>Login</StyleHeadingTitle>
+          </div>
 
           {/* ID */}
           <div>
