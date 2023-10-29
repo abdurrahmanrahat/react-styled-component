@@ -80,8 +80,16 @@ function App() {
     border-radius: 8px;
   `;
 
+  // button and register div
+  const StyledBtnRegDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+  `;
+
   return (
-    <div className="md:flex items-center gap-4 p-4 lg:p-12">
+    <div className="md:flex items-center gap-4 my-8 md:my-0 lg:p-12">
       {/* image */}
       <div className="md:w-1/2 p-8 md:p-0">
         <img src={FormImg} alt="" className="md:w-[420px]" />
@@ -128,16 +136,16 @@ function App() {
             </LabelText>
           </Label>
 
-          <div className="flex items-center justify-center mt-4">
+          <StyledBtnRegDiv className="flex items-center justify-center mt-4">
             <StyledButton>Login</StyledButton>
-          </div>
+          </StyledBtnRegDiv>
 
-          <div className="flex items-center justify-center mt-4">
+          <StyledBtnRegDiv className="flex items-center justify-center mt-4">
             <LabelText>
               Did&apos;t have an account?{" "}
               <StyleRegisterText>Register Here</StyleRegisterText>
             </LabelText>
-          </div>
+          </StyledBtnRegDiv>
         </StyledForm>
       </div>
     </div>
