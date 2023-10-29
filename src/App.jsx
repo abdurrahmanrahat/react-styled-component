@@ -1,11 +1,12 @@
 import "./App.css";
 import FormImg from "./assets/login-image.png";
 import styled from "styled-components";
+import { FaEyeSlash } from "react-icons/fa";
 
 function App() {
   // form styled
   const StyledForm = styled.form`
-    padding: 20px;
+    padding: 12px;
     @media (max-width: 769px) {
       padding: 2px;
     }
@@ -82,7 +83,7 @@ function App() {
   return (
     <div className="md:flex items-center gap-4 p-4 lg:p-12">
       {/* image */}
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 p-8 md:p-0">
         <img src={FormImg} alt="" className="md:w-[420px]" />
       </div>
       {/* form fields */}
@@ -99,12 +100,16 @@ function App() {
           </div>
 
           {/* password */}
-          <div>
+          <div className="relative">
             <StyledLabel>Password</StyledLabel>
             <StyledInput
               type="password"
               placeholder="Enter Password"
             ></StyledInput>
+            {/* eye icon */}
+            <span className="absolute top-10 right-4">
+              <FaEyeSlash />
+            </span>
           </div>
 
           <div className="flex justify-between">
